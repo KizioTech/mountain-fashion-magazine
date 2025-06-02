@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Fashion Magazine - Where Style Meets Culture</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="homeLink">
+                <i class="fas fa-mountain logo-icon"></i>Mountain
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                <li class="dropdown" id="featuresDropdown">
+                    <a href="#features" class="nav-link dropdown-toggle" data-page="features">
+                        Features <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#features" class="nav-link" data-page="features">Editorial Excellence</a></li>
+                        <li><a href="#showcase" class="nav-link" data-page="showcase">Showcase</a></li>
+                        <li><a href="#newsletter" class="nav-link" data-page="newsletter">Newsletter</a></li>
+                        <li><a href="#pricing" class="nav-link" data-page="pricing">Go Pro</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-login" id="loginBtn">Login</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content Container -->
+    <main id="pageContent">
+        <!-- Home Section -->
+        <section class="page-section active" id="home">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Mountain Fashion Magazine</h1>
+                    <p class="hero-subtitle">Where Global Style Meets Malawian Culture</p>
+                    <div class="hero-cta">
+                        <a href="#features" class="btn btn-primary" data-page="features">Explore Collection</a>
+                        <a href="#pricing" class="btn btn-secondary" data-page="pricing">Go Pro</a>
+                    </div>
+                </div>
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="home-additional-content">
+                <div class="container">
+                    <div class="home-intro-row">
+                        <div class="home-intro-text">
+                            <h2 class="home-section-title-custom">Welcome to the Peak of Style</h2>
+                            <p class="home-section-subtitle-custom">Mountain Fashion Magazine is your exclusive pass to
+                                the stunning intersection of high fashion and the vibrant cultural landscape of Malawi.
+                                We bring you closer to the designers, the stories, and the breathtaking scenery that
+                                inspire us.</p>
+                            <p>From the bustling markets of Lilongwe to the serene shores of Lake Malawi, discover how
+                                tradition and modernity dance together, creating a unique sartorial narrative. Our pages
+                                are filled with stunning photography, insightful articles, and a celebration of both
+                                global trends and local artistry.</p>
+                            <a href="#features" class="btn btn-primary" data-page="features">Discover More</a>
+                        </div>
+                        <div class="home-intro-image">
+                            <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=2574&auto=format&fit=crop"
+                                alt="Malawian Fashion Scene Inspiration">
+                        </div>
+                    </div>
+
+                    <div class="home-highlights-section">
+                        <h2 class="home-section-title-custom text-center">Magazine Highlights</h2>
+                        <div class="highlights-grid-new">
+                            <div class="highlight-card-new">
+                                <div class="highlight-icon-new">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h3 class="highlight-title-new">Cultural Threads</h3>
+                                <p class="highlight-description-new">Explore how Malawian heritage, from Chitenje prints
+                                    to traditional artisanship, is woven into contemporary fashion narratives.</p>
+                            </div>
+                            <div class="highlight-card-new">
+                                <div class="highlight-icon-new">
+                                    <i class="fas fa-mountain-sun"></i>
+                                </div>
+                                <h3 class="highlight-title-new">Scenic Shoots</h3>
+                                <p class="highlight-description-new">Journey with us through Malawi's breathtaking
+                                    landscapes, the backdrop for our exclusive fashion editorials.</p>
+                            </div>
+                            <div class="highlight-card-new">
+                                <div class="highlight-icon-new">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
+                                <h3 class="highlight-title-new">Designer Spotlights</h3>
+                                <p class="highlight-description-new">Get to know the visionary designers, both emerging
+                                    and established, who are shaping the future of style in Malawi and beyond.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-latest-issue-section">
+                <div class="container">
+                    <h2 class="home-section-title-custom text-center">Hot Off The Press</h2>
+                    <p class="home-section-subtitle-custom text-center">A sneak peek into our current issue, bridging
+                        Malawian elegance with global trends.</p>
+                    <div class="latest-issue-content-wrapper">
+                        <div class="latest-issue-cover">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2487&auto=format&fit=crop"
+                                alt="Mountain Fashion Magazine Latest Issue Cover">
+                        </div>
+                        <div class="latest-issue-details">
+                            <h3 class="latest-issue-title">Vol. 3: The "Heritage Bloom" Issue</h3>
+                            <p class="latest-issue-description">This month, we delve deep into how ancestral artistry is
+                                blossoming into contemporary masterpieces. Discover exclusive interviews, stunning
+                                editorials from the Zomba Plateau, and a guide to the season's most inspired looks.</p>
+                            <ul class="issue-features-list">
+                                <li><i class="fas fa-check-circle"></i> The New Wave of Chitenje Designers</li>
+                                <li><i class="fas fa-check-circle"></i> Conversations with Malawi's Top Models</li>
+                                <li><i class="fas fa-check-circle"></i> Fashion on the Shores of Cape Maclear</li>
+                                <li><i class="fas fa-check-circle"></i> Trend Report: Earth Tones & Artisanal
+                                    Accessories</li>
+                            </ul>
+                            <div class="latest-issue-cta">
+                                <a href="#showcase" class="btn btn-primary" data-page="showcase">View Excerpts</a>
+                                <a href="#pricing" class="btn btn-secondary" data-page="pricing">Full Access</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-team-section">
+    <div class="container">
+        <h2 class="home-section-title-custom text-center">Meet Our Visionaries</h2>
+        <p class="home-section-subtitle-custom text-center">The creative minds shaping Mountain Fashion Magazine and celebrating Malawian style.</p>
+
+        <div class="team-members-container">
+            <div class="team-member-card">
+                <div class="team-member-photo">
+                    <img src="images/Annie.jpg" alt="Annie Chaplin - Editor-in-Chief">
+                </div>
+                <div class="team-member-base-info">
+                    <h3 class="team-member-name">Annie Chaplin</h3>
+                    <p class="team-member-role">Editor-in-Chief</p>
+                </div>
+                <div class="team-member-details">
+                    <p class="team-member-description">Annie is the driving force behind Mountain Fashion, with a keen eye for storytelling that bridges Malawian culture with global fashion narratives.</p>
+                    <h4>Qualifications:</h4>
+                    <ul>
+                        <li>MA in Fashion Journalism</li>
+                        <li>10+ years in media & publishing</li>
+                    </ul>
+                    <h4>Achievements:</h4>
+                    <ul>
+                        <li>Launched "Malawi Style Week"</li>
+                        <li>Award for "Excellence in Cultural Reporting"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="team-member-card">
+                <div class="team-member-photo">
+                    <img src="images/thandiwe.jpg" alt="Thandiwe Moyo - Creative Director">
+                </div>
+                <div class="team-member-base-info">
+                    <h3 class="team-member-name">Thandiwe Moyo</h3>
+                    <p class="team-member-role">Creative Director</p>
+                </div>
+                <div class="team-member-details">
+                    <p class="team-member-description">Thandiwe translates Malawi's vibrant spirit into stunning visual concepts, ensuring every issue is a feast for the eyes.</p>
+                    <h4>Qualifications:</h4>
+                    <ul>
+                        <li>BFA in Graphic Design & Photography</li>
+                        <li>Expert in African textile art</li>
+                    </ul>
+                    <h4>Achievements:</h4>
+                    <ul>
+                        <li>Redefined the magazine's visual identity</li>
+                        <li>Curated "Art & Fashion" Lilongwe exhibition</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="team-member-card">
+                <div class="team-member-photo">
+                    <img src="images/david.jpg" alt="David Phiri - Lead Photographer">
+                </div>
+                 <div class="team-member-base-info">
+                    <h3 class="team-member-name">David Phiri</h3>
+                    <p class="team-member-role">Lead Photographer & Culture Correspondent</p>
+                </div>
+                <div class="team-member-details">
+                    <p class="team-member-description">David's lens captures the soul of Malawian fashion, bringing landscapes and local talent to the forefront of our stories.</p>
+                    <h4>Qualifications:</h4>
+                    <ul>
+                        <li>Diploma in Professional Photography</li>
+                        <li>Specialist in documentary & fashion shoots</li>
+                    </ul>
+                    <h4>Achievements:</h4>
+                    <ul>
+                        <li>Multiple international photography awards</li>
+                        <li>"Faces of Malawi" photo series acclaimed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home-quick-contact-section">
+    <div class="container">
+        <h2 class="home-section-title-custom text-center">Get In Touch</h2>
+        <p class="home-section-subtitle-custom text-center">We'd love to hear from you! For collaborations, queries, or just to say hello:</p>
+        <div class="quick-contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>Email Us</h3>
+                <p><a href="mailto:editorial@mountainfashion.com">editorial@mountainfashion.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone contact-icon"></i>
+                <h3>Call Us</h3>
+                <p><a href="tel:+265123456789">+265 123 456 789</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-instagram contact-icon"></i>
+                <h3>Follow Us</h3>
+                <p><a href="#" target="_blank">@MountainFashionMW</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="page-section" id="features">
+            <div class="container">
+                <h2 class="section-title fade-in">Editorial Excellence</h2>
+                <p class="section-subtitle fade-in">Discover the intersection of global fashion trends and Malawian
+                    cultural heritage</p>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2670&auto=format&fit=crop"
+                                alt="Luxury Fashion">
+                        </div>
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="feature-title">Luxury Fashion</h3>
+                        <p class="feature-description">Curated collections from Gucci, Dior, Saint Laurent, and emerging
+                            designers. Experience haute couture like never before.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img src="images/img2.jpg" alt="Cultural Heritage">
+                        </div>
+                        <div class="feature-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h3 class="feature-title">Cultural Heritage</h3>
+                        <p class="feature-description">Celebrating Malawian traditions through chitenje patterns, local
+                            artisans, and contemporary African fashion.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=2670&auto=format&fit=crop"
+                                alt="Editorial Photography">
+                        </div>
+                        <div class="feature-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="feature-title">Editorial Photography</h3>
+                        <p class="feature-description">Stunning visual narratives that capture the essence of fashion
+                            against Malawi's breathtaking landscapes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section class="page-section" id="showcase">
+            <div class="container">
+                <h2 class="section-title fade-in">Latest Collections</h2>
+                <p class="section-subtitle fade-in">Explore our exclusive fashion editorials shot in Malawi's most
+                    stunning locations</p>
+                <div class="showcase-grid">
+                    <div class="showcase-item fade-in"
+                        style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2620&auto=format&fit=crop')">
+                        <div class="showcase-overlay">
+                            <h3>Spring '25 Editorial</h3>
+                            <p>Mountain lakes meet haute couture</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item fade-in"
+                        style="background-image: url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=2574&auto=format&fit=crop')">
+                        <div class="showcase-overlay">
+                            <h3>Cultural Fusion</h3>
+                            <p>Traditional meets contemporary</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item fade-in"
+                        style="background-image: url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=2680&auto=format&fit=crop')">
+                        <div class="showcase-overlay">
+                            <h3>Designer Spotlight</h3>
+                            <p>Local talents take center stage</p>
+                        </div>
+                    </div>
+                    <div class="showcase-item fade-in"
+                        style="background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2670&auto=format&fit=crop')">
+                        <div class="showcase-overlay">
+                            <h3>Street Style</h3>
+                            <p>Fashion from Lilongwe to Milan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="page-section" id="pricing">
+            <div class="container">
+                <h2 class="section-title fade-in">Go Pro Experience</h2>
+                <p class="section-subtitle fade-in">Unlock exclusive content, early access, and premium features</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Silver</h3>
+                            <div class="pricing-price">$9.99</div>
+                            <div class="pricing-period">per month</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Full access to all articles</li>
+                            <li><i class="fas fa-check"></i> Weekly fashion newsletters</li>
+                            <li><i class="fas fa-check"></i> Access to basic photo galleries</li>
+                            <li><i class="fas fa-times"></i> Exclusive interviews</li>
+                            <li><i class="fas fa-times"></i> Behind-the-scenes content</li>
+                            <li><i class="fas fa-times"></i> Early access to collections</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Get Started</a>
+                    </div>
+                    <div class="pricing-card fade-in diamond">
+                        <div class="popular">MOST POPULAR</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Gold</h3>
+                            <div class="pricing-price">$19.99</div>
+                            <div class="pricing-period">per month</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Silver benefits</li>
+                            <li><i class="fas fa-check"></i> Exclusive interviews</li>
+                            <li><i class="fas fa-check"></i> Behind-the-scenes content</li>
+                            <li><i class="fas fa-check"></i> Early access to collections</li>
+                            <li><i class="fas fa-check"></i> Digital magazine subscription</li>
+                            <li><i class="fas fa-times"></i> Personal style consultation</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Go Pro</a>
+                    </div>
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Platinum</h3>
+                            <div class="pricing-price">$49.99</div>
+                            <div class="pricing-period">per month</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Gold benefits</li>
+                            <li><i class="fas fa-check"></i> Personal style consultation</li>
+                            <li><i class="fas fa-check"></i> Invitations to exclusive events</li>
+                            <li><i class="fas fa-check"></i> Print magazine subscription</li>
+                            <li><i class="fas fa-check"></i> Limited edition fashion gifts</li>
+                            <li><i class="fas fa-check"></i> Priority customer support</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary">Premium Access</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="page-section" id="newsletter">
+            <div class="container">
+                <h2 class="section-title fade-in">Stay In Style</h2>
+                <p class="fade-in">Get the latest fashion insights, cultural features, and exclusive content delivered
+                    to your inbox.</p>
+                <form class="newsletter-form fade-in" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">Contact Us</h2>
+                <p class="section-subtitle fade-in">Get in touch with our editorial team</p>
+                <div class="contact-grid fade-in">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h3>Email</h3>
+                        <p>editorial@mountainfashion.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <h3>Phone</h3>
+                        <p>+265 123 456 789</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <h3>Address</h3>
+                        <p>Fashion District, Lilongwe, Malawi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2025 Mountain Fashion Magazine. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="form-container">
+            <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
+            <p class="title">Welcome back</p>
+            <form class="form" id="loginForm">
+                <input type="email" class="input" placeholder="Email" required>
+                <input type="password" class="input" placeholder="Password" required>
+                <p class="page-link">
+                    <span class="page-link-label">Forgot Password?</span>
+                </p>
+                <button type="submit" class="form-btn">Log in</button>
+            </form>
+            <p class="sign-up-label">
+                Don't have an account?<span class="sign-up-link">Sign up</span>
+            </p>
+            <div class="buttons-container">
+                <div class="apple-login-button">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" class="apple-icon"
+                        viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M747.4 535.7c-.4-68.2 30.5-119.6 92.9-157.5-34.9-50-87.7-77.5-157.3-82.8-65.9-5.2-138 38.4-164.4 38.4-27.9 0-91.7-36.6-141.9-36.6C273.1 298.8 163 379.8 163 544.6c0 48.7 8.9 99 26.7 150.8 23.8 68.2 109.6 235.3 199.1 232.6 46.8-1.1 79.9-33.2 140.8-33.2 59.1 0 89.7 33.2 141.9 33.2 90.3-1.3 167.9-153.2 190.5-221.6-121.1-57.1-114.6-167.2-114.6-170.7zm-105.1-305c50.7-60.2 46.1-115 44.6-134.7-44.8 2.6-96.6 30.5-126.1 64.8-32.5 36.8-51.6 82.3-47.5 133.6 48.4 3.7 92.6-21.2 129-63.7z">
+                        </path>
+                    </svg>
+                    <span>Log in with Apple</span>
+                </div>
+                <div class="google-login-button">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px"
+                        class="google-icon" viewBox="0 0 48 48" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+                        <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+                        <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+                        <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+                        </path>
+                    </svg>
+                    <span>Log in with Google</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Dropdown functionality
+        const dropdown = document.getElementById('featuresDropdown');
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+        // Handle dropdown hover
+        dropdown.addEventListener('mouseenter', () => {
+            dropdown.classList.add('active');
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            dropdown.classList.remove('active');
+        });
+
+        // Handle dropdown click for mobile
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+        });
+
+        // Page navigation system
+        function navigateToPage(pageId) {
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const targetSection = document.getElementById(pageId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Close mobile menu if open
+            navLinks.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+
+            // Close dropdown if open
+            dropdown.classList.remove('active');
+
+            // Update URL
+            history.pushState(null, null, `#${pageId}`);
+        }
+
+        // Set up navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('data-page');
+                if (pageId) {
+                    navigateToPage(pageId);
+                    // Close dropdown if open (for mobile)
+                    dropdown.classList.remove('active');
+                }
+            });
+        });
+
+        // Set up hero CTA buttons
+        document.querySelectorAll('.hero-cta .btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = btn.getAttribute('data-page');
+                if (pageId) {
+                    navigateToPage(pageId);
+                }
+            });
+        });
+
+        // Home link
+        document.getElementById('homeLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            navigateToPage('home');
+        });
+
+        // Handle initial page load
+        function handleInitialLoad() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                navigateToPage(hash);
+            } else {
+                navigateToPage('home');
+            }
+        }
+
+        // Handle back/forward navigation
+        window.addEventListener('popstate', handleInitialLoad);
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', handleInitialLoad);
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Newsletter form handling
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+
+            // Simple validation
+            if (email) {
+                // Simulate subscription
+                alert('Thank you for subscribing! Welcome to Mountain Fashion Magazine.');
+                this.reset();
+            }
+        });
+
+        // Login modal functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeModal');
+
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeModal.addEventListener('click', () => {
+            loginModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Login form handling
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            const password = this.querySelector('input[type="password"]').value;
+
+            // Simple validation
+            if (email && password) {
+                alert('Login successful! Welcome back to Mountain Fashion.');
+                loginModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                this.reset();
+            }
+        });
+
+        // Dynamic typing effect for hero subtitle
+        const subtitle = document.querySelector('.hero-subtitle');
+        if (subtitle) {
+            const originalText = subtitle.textContent;
+            let currentText = '';
+            let index = 0;
+
+            function typeWriter() {
+                if (index < originalText.length) {
+                    currentText += originalText.charAt(index);
+                    subtitle.textContent = currentText;
+                    index++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+
+            // Start typing effect after page loads
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    subtitle.textContent = '';
+                    typeWriter();
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+
+</html>
