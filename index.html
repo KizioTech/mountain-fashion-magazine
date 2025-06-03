@@ -844,104 +844,6 @@
             </div>
         </div>
 
-        <!-- Payment Modal -->
-        <div class="modal" id="paymentModal">
-            <div class="form-container payment-form">
-                <button class="close-modal" id="closePaymentModal"><i class="fas fa-times"></i></button>
-                <p class="title">Complete Your Purchase</p>
-
-                <div class="payment-summary">
-                    <div class="payment-item">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2536&auto=format&fit=crop"
-                            alt="Product Image" class="payment-product-image">
-                        <div class="payment-item-details">
-                            <h4>Chitenje Print Dress</h4>
-                            <p>Size: M | Color: Blue</p>
-                            <p class="payment-price">$89.99</p>
-                        </div>
-                    </div>
-
-                    <div class="payment-totals">
-                        <div class="payment-row">
-                            <span>Subtotal</span>
-                            <span>$89.99</span>
-                        </div>
-                        <div class="payment-row">
-                            <span>Shipping</span>
-                            <span>$5.99</span>
-                        </div>
-                        <div class="payment-row total">
-                            <span>Total</span>
-                            <span>$95.98</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="payment-methods">
-                    <h4>Select Payment Method</h4>
-
-                    <div class="method-options">
-                        <div class="method-option active" data-method="card">
-                            <i class="far fa-credit-card"></i>
-                            <span>Credit/Debit Card</span>
-                        </div>
-                        <div class="method-option" data-method="paypal">
-                            <i class="fab fa-cc-paypal"></i>
-                            <span>PayPal</span>
-                        </div>
-                        <div class="method-option" data-method="mobile-money">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Mobile Money</span>
-                        </div>
-                        <div class="method-option" data-method="bank-transfer">
-                            <i class="fas fa-university"></i>
-                            <span>Bank Transfer</span>
-                        </div>
-                    </div>
-
-                    <div class="payment-details" id="cardDetails">
-                        <div class="form-group">
-                            <label for="cardNumber">Card Number</label>
-                            <input type="text" id="cardNumber" class="input" placeholder="1234 5678 9012 3456">
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="cardExpiry">Expiry Date</label>
-                                <input type="text" id="cardExpiry" class="input" placeholder="MM/YY">
-                            </div>
-                            <div class="form-group">
-                                <label for="cardCvc">CVC</label>
-                                <input type="text" id="cardCvc" class="input" placeholder="123">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cardName">Name on Card</label>
-                            <input type="text" id="cardName" class="input" placeholder="John Doe">
-                        </div>
-                    </div>
-
-                    <div class="payment-details" id="mobileMoneyDetails" style="display: none;">
-                        <div class="form-group">
-                            <label for="mobileProvider">Mobile Provider</label>
-                            <select id="mobileProvider" class="input">
-                                <option value="airtel">Airtel Money</option>
-                                <option value="tnm">TNM Mpamba</option>
-                                <option value="mobicash">Mobicash</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="mobileNumber">Mobile Number</label>
-                            <input type="text" id="mobileNumber" class="input" placeholder="+265 123 456 789">
-                        </div>
-                    </div>
-
-                    <button class="form-btn payment-confirm">Confirm Payment</button>
-                </div>
-            </div>
-        </div>
         </section>
 
         <!-- Contact Section -->
@@ -986,6 +888,103 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="paymentModal">
+        <div class="form-container payment-form">
+            <button class="close-modal" id="closePaymentModal"><i class="fas fa-times"></i></button>
+            <p class="title">Complete Your Purchase</p>
+
+            <div class="payment-summary">
+                <div class="payment-item">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=2536&auto=format&fit=crop"
+                        alt="Product Image" class="payment-product-image">
+                    <div class="payment-item-details">
+                        <h4>Chitenje Print Dress</h4>
+                        <p>Size: M | Color: Blue</p>
+                        <p class="payment-price">$89.99</p>
+                    </div>
+                </div>
+
+                <div class="payment-totals">
+                    <div class="payment-row">
+                        <span>Subtotal</span>
+                        <span>$89.99</span>
+                    </div>
+                    <div class="payment-row">
+                        <span>Shipping</span>
+                        <span>$5.99</span>
+                    </div>
+                    <div class="payment-row total">
+                        <span>Total</span>
+                        <span>$95.98</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h4>Select Payment Method</h4>
+
+                <div class="method-options">
+                    <div class="method-option active" data-method="card">
+                        <i class="far fa-credit-card"></i>
+                        <span>Credit/Debit Card</span>
+                    </div>
+                    <div class="method-option" data-method="paypal">
+                        <i class="fab fa-cc-paypal"></i>
+                        <span>PayPal</span>
+                    </div>
+                    <div class="method-option" data-method="mobile-money">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Money</span>
+                    </div>
+                    <div class="method-option" data-method="bank-transfer">
+                        <i class="fas fa-university"></i>
+                        <span>Bank Transfer</span>
+                    </div>
+                </div>
+
+                <div class="payment-details" id="cardDetails">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" class="input" placeholder="1234 5678 9012 3456">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardExpiry">Expiry Date</label>
+                            <input type="text" id="cardExpiry" class="input" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCvc">CVC</label>
+                            <input type="text" id="cardCvc" class="input" placeholder="123">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" class="input" placeholder="John Doe">
+                    </div>
+                </div>
+
+                <div class="payment-details" id="mobileMoneyDetails" style="display: none;">
+                    <div class="form-group">
+                        <label for="mobileProvider">Mobile Provider</label>
+                        <select id="mobileProvider" class="input">
+                            <option value="airtel">Airtel Money</option>
+                            <option value="tnm">TNM Mpamba</option>
+                            <option value="mobicash">Mobicash</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input type="text" id="mobileNumber" class="input" placeholder="+265 123 456 789">
+                    </div>
+                </div>
+
+                <button class="form-btn payment-confirm">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Login Modal -->
     <div class="modal" id="loginModal">
@@ -1038,10 +1037,11 @@
         <i class="fas fa-shopping-cart"></i>
         <span id="cartCount">0</span>
     </div>
-
-    <!-- Cart Overlay -->
     <div id="cartOverlay" class="cart-overlay hidden">
         <div class="cart-content">
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
             <h3>Your Cart</h3>
             <ul id="cartItems"></ul>
             <button class="btn btn-primary" id="proceedToPay">Proceed to Pay</button>
@@ -1056,9 +1056,34 @@
         </div>
     </div>
 
-
-    <!-- No separate Payment Popup needed; paymentModal is reused for cart checkout -->
-
+    <!-- Standalone Payment Modal -->
+    <div id="simplePaymentModal" class="modal" style="display:none;">
+        <div class="form-container payment-form">
+            <button class="close-modal" id="closeSimplePaymentModal"><i class="fas fa-times"></i></button>
+            <p class="title">Complete Your Purchase</p>
+            <form id="simplePaymentForm">
+                <div class="form-group">
+                    <label for="cardNumberSimple">Card Number</label>
+                    <input type="text" id="cardNumberSimple" class="input" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardExpirySimple">Expiry Date</label>
+                        <input type="text" id="cardExpirySimple" class="input" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCvcSimple">CVC</label>
+                        <input type="text" id="cardCvcSimple" class="input" placeholder="123" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cardNameSimple">Name on Card</label>
+                    <input type="text" id="cardNameSimple" class="input" placeholder="John Doe" required>
+                </div>
+                <button type="submit" class="form-btn">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         // Mobile menu toggle
@@ -1423,42 +1448,86 @@
             }
         });
 
+        // Replace the existing cart-related JavaScript code with this:
+
+        // Cart functionality
         let cart = [];
 
-        document.querySelectorAll('.btn-add-cart').forEach((btn, index) => {
-            btn.addEventListener('click', () => {
-                const productTitle = btn.closest('.product-info').querySelector('.product-title').textContent;
-                cart.push(productTitle);
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add to cart functionality
+            document.querySelectorAll('.btn-add-cart').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const productCard = btn.closest('.product-info');
+                    const productTitle = productCard.querySelector('.product-title').textContent;
+                    cart.push(productTitle);
+                    updateCartCount();
+                });
+            });
+
+            // Update cart count
+            function updateCartCount() {
                 document.getElementById('cartCount').textContent = cart.length;
+            }
+
+            // Open cart
+            document.getElementById('floatingCart').addEventListener('click', () => {
+                const cartOverlay = document.getElementById('cartOverlay');
+                updateCartDisplay();
+                cartOverlay.classList.remove('hidden');
             });
-        });
 
-        document.getElementById('floatingCart').addEventListener('click', () => {
-            const overlay = document.getElementById('cartOverlay');
-            const list = document.getElementById('cartItems');
-            list.innerHTML = '';
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                list.appendChild(li);
+            // Update cart display
+            function updateCartDisplay() {
+                const cartItems = document.getElementById('cartItems');
+                cartItems.innerHTML = '';
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    cartItems.appendChild(li);
+                });
+            }
+
+            // Close cart button
+            document.getElementById('closeCart').addEventListener('click', () => {
+                const cartOverlay = document.getElementById('cartOverlay');
+                cartOverlay.classList.add('hidden');
             });
-            overlay.classList.remove('hidden');
-        });
 
-        document.getElementById('proceedToPay').addEventListener('click', () => {
-            document.getElementById('cartOverlay').classList.add('hidden');
-            document.getElementById('paymentPopup').classList.remove('hidden');
-        });
+            // Close cart when clicking outside
+            document.getElementById('cartOverlay').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('cartOverlay')) {
+                    document.getElementById('cartOverlay').classList.add('hidden');
+                }
+            });
 
-        document.getElementById('closePaymentPopup').addEventListener('click', () => {
-            document.getElementById('paymentPopup').classList.add('hidden');
-        });
-        document.querySelectorAll('.quick-view').forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                const card = e.target.closest('.product-card');
-                document.getElementById('quickViewTitle').textContent = card.querySelector('.product-title').textContent;
-                document.getElementById('quickViewDesc').textContent = card.querySelector('.product-description').textContent;
-                document.getElementById('quickViewModal').classList.remove('hidden');
+            // Show the payment modal when "Proceed to Pay" is clicked
+            document.getElementById('proceedToPay').addEventListener('click', function () {
+                document.getElementById('cartOverlay').classList.add('hidden');
+                document.getElementById('simplePaymentModal').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close modal with X button
+            document.getElementById('closeSimplePaymentModal').addEventListener('click', function () {
+                document.getElementById('simplePaymentModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Optional: Close modal when clicking outside the form
+            document.getElementById('simplePaymentModal').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Handle payment form submission
+            document.getElementById('simplePaymentForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Payment processed successfully! Thank you for your purchase.');
+                document.getElementById('simplePaymentModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+                this.reset();
             });
         });
     </script>
