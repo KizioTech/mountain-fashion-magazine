@@ -442,3 +442,55 @@
                 this.reset();
             });
         });
+        // Add the new page to the navigation system
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add navigation for Designer's Spotlight
+            document.querySelectorAll('[data-page="designers"]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navigateToPage('designers');
+                });
+            });
+            
+            // Add the existing navigation function
+            function navigateToPage(pageId) {
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-page') === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Hide all sections
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Show the selected section
+                const targetSection = document.getElementById(pageId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+
+                // Scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const navLinks = document.getElementById('navLinks');
+                navLinks.classList.remove('active');
+                const icon = document.getElementById('menuToggle').querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+
+                // Close dropdown if open
+                const dropdown = document.getElementById('featuresDropdown');
+                dropdown.classList.remove('active');
+
+                // Update URL
+                history.pushState(null, null, `#${pageId}`);
+            }
+        });
