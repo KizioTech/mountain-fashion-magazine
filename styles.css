@@ -893,7 +893,7 @@ body {
     font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--deep-navy);
+    color: var(--sunlit-gold);
     position: relative;
     display: inline-block;
     width: 100%;
@@ -2222,3 +2222,299 @@ body {
     font-size: 1.3rem;
     cursor: pointer;
 }
+/* New Beauty & Luxury Showcase Styles */
+        #showcase {
+            background: linear-gradient(to bottom, #0a0a0a, #1a1a2e);
+            color: #f9f6f1;
+            padding: 4rem 0;
+        }
+        
+        .beauty-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                         url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2787&auto=format&fit=crop') center/cover;
+            padding: 5rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .beauty-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #FFD66B;
+        }
+        
+        .beauty-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        
+        .luxury-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .luxury-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .luxury-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 214, 107, 0.2);
+        }
+        
+        .luxury-header {
+            padding: 2rem;
+            background: rgba(26, 26, 46, 0.7);
+            border-bottom: 2px solid #FFD66B;
+        }
+        
+        .luxury-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #FFD66B;
+        }
+        
+        .luxury-content {
+            padding: 2rem;
+        }
+        
+        .luxury-content p {
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .luxury-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .luxury-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+        
+        .luxury-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .luxury-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .luxury-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+        
+        .luxury-overlay h4 {
+            margin-bottom: 0.5rem;
+            color: #FFD66B;
+        }
+        
+        .brand-showcase {
+            margin: 5rem 0;
+            text-align: center;
+        }
+        
+        .brand-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 3rem 0;
+        }
+        
+        .brand-logo {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 214, 107, 0.2);
+        }
+        
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            filter: grayscale(100%) brightness(150%);
+            transition: filter 0.3s ease;
+        }
+        
+        .brand-logo:hover img {
+            filter: grayscale(0%) brightness(100%);
+        }
+        
+        .wellness-section {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin: 5rem 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 3rem;
+        }
+        
+        .wellness-content {
+            flex: 1;
+        }
+        
+        .wellness-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFD66B;
+        }
+        
+        .wellness-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .wellness-image img {
+            width: 100%;
+            display: block;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 2.5rem;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: "“";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(255, 214, 107, 0.2);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .beauty-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.9)), 
+                         url('https://images.unsplash.com/photo-1605733513597-a8f8341084e6?q=80&w=2729&auto=format&fit=crop') center/cover;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+        
+        .beauty-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFD66B;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .wellness-section {
+                flex-direction: column;
+            }
+            
+            .beauty-hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .luxury-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .beauty-hero {
+                padding: 3rem 1.5rem;
+            }
+            
+            .beauty-hero h2 {
+                font-size: 2rem;
+            }
+            
+            .wellness-section {
+                padding: 2rem;
+            }
+            
+            .brand-logos {
+                gap: 1.5rem;
+            }
+            
+            .brand-logo {
+                width: 80px;
+                height: 80px;
+                padding: 1rem;
+            }
+        }
