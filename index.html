@@ -19,6 +19,35 @@
 </head>
 
 <body>
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-button ask-ai-button" id="aiAssistantButton">
+            Ask AI
+        </button>
+
+        <div class="ai-panel" id="aiPanel">
+            <div class="ai-header">
+                <h3>Fashion Assistant</h3>
+                <button id="closeAiPanel"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="message ai-message">
+                    Hello! I'm your AI fashion assistant. How can I help you today?
+                    You can ask about Malawian fashion, our magazine, or style advice.
+                </div>
+            </div>
+            <div class="ai-input">
+                <input type="text" id="aiInput" placeholder="Ask about Malawian fashion...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Scroll Indicator -->
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
@@ -43,7 +72,7 @@
                     </ul>
                 </li>
                 <li><a href="designers" class="nav-link" data-page="designers">Designer's Spotlight</a></li>
-                <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+                <li><a href="#contact" class="nav-link" data-page="contact">About Us</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="btn btn-login" id="loginBtn">Login</button>
@@ -260,6 +289,7 @@
                             </div>
                         </div>
                     </div>
+                    <a class = "btn btn-secondary" href="#contact"> About Us</a>
                 </div>
             </div>
 
@@ -272,17 +302,18 @@
                         <div class="contact-item">
                             <i class="fas fa-envelope contact-icon"></i>
                             <h3>Email Us</h3>
-                            <p><a href="mailto:editorial@mountainfashion.com">editorial@mountainfashion.com</a></p>
+                            <p><a href="mailto:mount.fas.magazine@gmail.com">mount.fas.magazine@gmail.com</a></p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone contact-icon"></i>
                             <h3>Call Us</h3>
-                            <p><a href="tel:+265123456789">+265 123 456 789</a></p>
+                            <p><a href="tel:+265885157566">+265 885 157 566</a></p>
                         </div>
                         <div class="contact-item">
                             <i class="fab fa-instagram contact-icon"></i>
                             <h3>Follow Us</h3>
-                            <p><a href="#" target="_blank">@MountainFashionMW</a></p>
+                            <p><a href="https://www.instagram.com/mountainmagazine265?igsh=YmNuZnNncnE0cjE0"
+                                    target="_blank">@MountainMagazine265</a></p>
                         </div>
                     </div>
                 </div>
@@ -1298,7 +1329,7 @@
                     </div>
 
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="#" class="btn btn-primary">Browse Full Library</a>
+                        <a href="fabrics.html" class="btn btn-primary">Browse Full Library</a>
                     </div>
                 </div>
 
@@ -1349,13 +1380,242 @@
                     <h2>Join Our Designer Community</h2>
                     <p>Connect with fellow designers, access exclusive resources, and showcase your work to a global
                         audience passionate about Malawian-inspired fashion.</p>
-                    <a href="#" class="btn btn-primary">Sign Up Free</a>
-                    <a href="#pricing" class="btn btn-secondary" data-page="pricing">Go Pro</a>
+                    <button class="btn btn-primary" id="designerSignUp">Sign Up</button>
+                    <button class="btn btn-secondary" id="goProDesigner">Go Pro</button>
                 </div>
             </div>
         </section>
         <!-- Contact Section -->
         <section class="page-section" id="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">About Us</h2>
+                <p class="section-subtitle fade-in">Discover the passion and people behind Mountain Fashion Magazine</p>
+
+                <!-- Our Story Section -->
+                <div class="our-story-section">
+                    <div class="story-content">
+                        <div class="story-text">
+                            <h2>Our Story</h2>
+                            <p>Founded in 2020, Mountain Fashion Magazine emerged from a passion to showcase the unique
+                                intersection of Malawian cultural heritage and contemporary fashion. Our journey began
+                                with a simple vision: to create a platform that celebrates African creativity while
+                                connecting it with global fashion narratives.</p>
+                            <p>From our humble beginnings in Lilongwe, we've grown into a respected voice in the fashion
+                                industry, known for our stunning editorials that feature Malawi's breathtaking
+                                landscapes as backdrops. We've been privileged to collaborate with both emerging local
+                                designers and internationally acclaimed fashion houses.</p>
+                            <p>Today, we stand as a testament to the power of fashion as a universal language that
+                                transcends borders while honoring its cultural roots. Our pages tell stories of
+                                craftsmanship, innovation, and the vibrant spirit of Malawi.</p>
+                        </div>
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=2670&auto=format&fit=crop"
+                                alt="Mountain Fashion Magazine Team">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-history"></i>
+                                    <h3>Established 2020</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Mission Section -->
+                <div class="our-mission-section">
+                    <div class="mission-content">
+                        <div class="mission-text">
+                            <h2>Our Mission</h2>
+                            <p>At Mountain Fashion Magazine, we're dedicated to elevating African fashion to the global
+                                stage while preserving and celebrating its cultural authenticity. We bridge the gap
+                                between traditional Malawian artistry and contemporary design, creating a dialogue
+                                between heritage and innovation.</p>
+                            <p>We champion sustainability, ethical practices, and the empowerment of local artisans.
+                                Through our platform, we aim to inspire a new generation of designers who draw from
+                                their roots while shaping the future of fashion.</p>
+                        </div>
+                        <div class="mission-values">
+                            <div class="value-card">
+                                <i class="fas fa-globe-africa"></i>
+                                <h3>Cultural Celebration</h3>
+                                <p>Showcasing Malawian heritage through fashion</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-hands-helping"></i>
+                                <h3>Community Empowerment</h3>
+                                <p>Supporting local artisans and designers</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Sustainable Practices</h3>
+                                <p>Promoting eco-friendly fashion initiatives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Team Section -->
+                <div class="team-section">
+                    <h3 class="team-section-title">Meet Our Visionaries</h3>
+                    <p class="team-section-subtitle">The creative minds shaping Mountain Fashion Magazine</p>
+
+                    <div class="team-members-container">
+                        <!-- Existing Member 1 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="images/Annie.jpg" alt="Annie Chaplin - Editor-in-Chief">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">Annie Chaplin</h3>
+                                <p class="team-member-role">Editor-in-Chief</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">Annie is the driving force behind Mountain Fashion,
+                                    with a keen eye for storytelling that bridges Malawian culture with global fashion
+                                    narratives.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>MA in Fashion Journalism</li>
+                                    <li>10+ years in media & publishing</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Launched "Malawi Style Week"</li>
+                                    <li>Award for "Excellence in Cultural Reporting"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Existing Member 2 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="images/thandiwe.jpg" alt="Thandiwe Moyo - Creative Director">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">Thandiwe Moyo</h3>
+                                <p class="team-member-role">Creative Director</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">Thandiwe translates Malawi's vibrant spirit into
+                                    stunning visual concepts, ensuring every issue is a feast for the eyes.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>BFA in Graphic Design & Photography</li>
+                                    <li>Expert in African textile art</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Redefined the magazine's visual identity</li>
+                                    <li>Curated "Art & Fashion" Lilongwe exhibition</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Existing Member 3 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="images/david.jpg" alt="David Phiri - Lead Photographer">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">David Phiri</h3>
+                                <p class="team-member-role">Lead Photographer & Culture Correspondent</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">David's lens captures the soul of Malawian fashion,
+                                    bringing landscapes and local talent to the forefront of our stories.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>Diploma in Professional Photography</li>
+                                    <li>Specialist in documentary & fashion shoots</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Multiple international photography awards</li>
+                                    <li>"Faces of Malawi" photo series acclaimed</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- New Placeholder 1 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop"
+                                    alt="James Mwale - Marketing Director">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">James Mwale</h3>
+                                <p class="team-member-role">Marketing Director</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">James connects our brand with audiences worldwide,
+                                    creating impactful campaigns that celebrate Malawian fashion.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>MBA in Digital Marketing</li>
+                                    <li>Certified Brand Strategist</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Grew social media following by 300%</li>
+                                    <li>Developed award-winning brand campaigns</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- New Placeholder 2 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2664&auto=format&fit=crop"
+                                    alt="Sarah Banda - Fashion Editor">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">Sarah Banda</h3>
+                                <p class="team-member-role">Fashion Editor</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">Sarah curates our fashion content with an expert eye
+                                    for emerging trends and timeless Malawian aesthetics.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>BA in Fashion Design</li>
+                                    <li>Former stylist for Malawi Fashion Week</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Discovered 5 emerging Malawian designers</li>
+                                    <li>Created our signature "Style Guides" series</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- New Placeholder 3 -->
+                        <div class="team-member-card">
+                            <div class="team-member-photo">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
+                                    alt="Michael Kapito - Business Development">
+                            </div>
+                            <div class="team-member-base-info">
+                                <h3 class="team-member-name">Michael Kapito</h3>
+                                <p class="team-member-role">Business Development</p>
+                            </div>
+                            <div class="team-member-details">
+                                <p class="team-member-description">Michael builds partnerships that support Malawian
+                                    designers and bring our magazine to new markets.</p>
+                                <h4>Qualifications:</h4>
+                                <ul>
+                                    <li>MSc in International Business</li>
+                                    <li>10+ years in fashion industry partnerships</li>
+                                </ul>
+                                <h4>Achievements:</h4>
+                                <ul>
+                                    <li>Secured distribution in 12 new countries</li>
+                                    <li>Developed our designer mentorship program</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <h2 class="section-title fade-in">Contact Us</h2>
                 <p class="section-subtitle fade-in">Get in touch with our editorial team</p>
@@ -1377,6 +1637,12 @@
                     </div>
                 </div>
             </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.7645872606577!2d35.33467057390891!3d-15.389230613106637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18d904e65366a83f%3A0xf1f319d6a0c14cf9!2sUniversity%20of%20Malawi!5e0!3m2!1sen!2smw!4v1749397300414!5m2!1sen!2smw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 
@@ -1388,10 +1654,14 @@
                     <p>&copy; 2025 Mountain Fashion Magazine. All rights reserved.</p>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.instagram.com/mountainmagazine265?igsh=YmNuZnNncnE0cjE0"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1H9D1jbQPv/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/MountainFM265?t=1UZT2f5D-cPkc63bbx9t9w&s=09"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.threads.net/@mountainmagazine265" class="threads-link">@</a>
+                    <a href="https://tiktok.com/@MountainFM265"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.pinterest.com/mountfasmagazine/"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
         </div>

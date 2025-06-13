@@ -494,3 +494,129 @@
                 history.pushState(null, null, `#${pageId}`);
             }
         });
+        
+        const designerSinUpBtn = document.getElementById('designerSignUp');
+        if (designerSinUpBtn) {
+            designerSinUpBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('loginModal').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            body.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+
+        // AI Assistant
+        const aiButton = document.getElementById('aiAssistantButton');
+        const aiPanel = document.getElementById('aiPanel');
+        const closeAiPanel = document.getElementById('closeAiPanel');
+        const aiMessages = document.getElementById('aiMessages');
+        const aiInput = document.getElementById('aiInput');
+        const sendButton = document.getElementById('sendMessage');
+        
+        // Toggle AI panel visibility
+        aiButton.addEventListener('click', () => {
+            aiPanel.classList.toggle('active');
+        });
+        
+        closeAiPanel.addEventListener('click', () => {
+            aiPanel.classList.remove('active');
+        });
+        
+        // Send message function
+        function sendMessage() {
+            const message = aiInput.value.trim();
+            if (!message) return;
+            
+            // Add user message
+            addMessage(message, 'user');
+            aiInput.value = '';
+            
+            // Simulate AI response after delay
+            setTimeout(() => {
+                const aiResponse = generateAIResponse(message);
+                addMessage(aiResponse, 'ai');
+            }, 1000);
+        }
+        
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', `${sender}-message`);
+            messageElement.textContent = text;
+            aiMessages.appendChild(messageElement);
+            
+            // Scroll to bottom
+            aiMessages.scrollTop = aiMessages.scrollHeight;
+        }
+        
+        // Generate AI response
+        function generateAIResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Fashion-related responses
+            if (lowerMessage.includes('malawi') || lowerMessage.includes('african') || lowerMessage.includes('chitenje')) {
+                return "Malawian fashion beautifully blends traditional elements with contemporary designs. The Chitenje fabric is central to our cultural expression, often featuring vibrant patterns that tell stories. Many designers are now incorporating these traditional fabrics into modern silhouettes.";
+            }
+            
+            if (lowerMessage.includes('magazine') || lowerMessage.includes('issue') || lowerMessage.includes('vol')) {
+                return "Our latest issue (Vol. 3: The 'Heritage Bloom' Issue) explores how ancestral artistry is blossoming into contemporary masterpieces. It features stunning editorials from the Zomba Plateau and interviews with Malawi's top designers.";
+            }
+            
+            if (lowerMessage.includes('design') || lowerMessage.includes('create') || lowerMessage.includes('inspiration')) {
+                return "For design inspiration, I recommend exploring our Pattern Library with hundreds of authentic Malawian patterns. Our Digital Moodboard tool can help you visualize concepts. Consider blending traditional motifs with modern cuts for a unique look.";
+            }
+            
+            if (lowerMessage.includes('subscribe') || lowerMessage.includes('pro') || lowerMessage.includes('access')) {
+                return "You can subscribe to our Pro experience for $19.99/month. This gives you access to exclusive interviews, behind-the-scenes content, early access to collections, and a digital magazine subscription. Visit our Pricing section for more details.";
+            }
+            
+            if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('call')) {
+                return "You can reach us at mount.fas.magazine@gmail.com or call +265 885 157 566. We're also active on Instagram @MountainMagazine265. For collaborations or queries, feel free to reach out anytime!";
+            }
+            
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+                return "Hello! I'm your AI fashion assistant. How can I help you with Malawian fashion, our magazine, or style advice?";
+            }
+            
+            // Default response
+            return "I'm an AI assistant specializing in Malawian fashion and Mountain Fashion Magazine. You can ask me about traditional fabrics, current issues, designer spotlights, or subscription options. How can I assist you today?";
+        }
+        
+        // Event listeners for sending messages
+        sendButton.addEventListener('click', sendMessage);
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrollIndicator = document.getElementById('scrollIndicator');
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
+            scrollIndicator.style.width = `${scrollPercent}%`;
+        });
