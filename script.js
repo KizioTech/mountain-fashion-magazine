@@ -287,37 +287,6 @@
                 });
             });
 
-            // Book consultation button
-            const bookConsultationBtn = document.getElementById('bookConsultation');
-            if (bookConsultationBtn) {
-                bookConsultationBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.getElementById('appointmentModal').style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                });
-            }
-
-            // Close appointment modal
-            const closeAppointmentModal = document.getElementById('closeAppointmentModal');
-            if (closeAppointmentModal) {
-                closeAppointmentModal.addEventListener('click', function () {
-                    document.getElementById('appointmentModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            }
-
-            // Appointment form submission
-            const appointmentForm = document.getElementById('appointmentForm');
-            if (appointmentForm) {
-                appointmentForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    alert('Appointment booked successfully! We will contact you to confirm.');
-                    document.getElementById('appointmentModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                    this.reset();
-                });
-            }
-
             // Payment method selection
             const methodOptions = document.querySelectorAll('.method-option');
             const paymentDetails = document.querySelectorAll('.payment-details');
