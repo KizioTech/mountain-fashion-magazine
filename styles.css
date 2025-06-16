@@ -85,6 +85,29 @@ body {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        margin-left: 6rem;
+        margin-top: 1rem;
+    }
+    
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .btn-login {
+        margin-right: 0.5rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
 /* AI Assistant */
 .ai-assistant {
     position: fixed;
@@ -458,6 +481,7 @@ p {
     box-shadow: 0 4px 15px rgba(255, 214, 107, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
+    margin-right: 2rem; /* Add margin to create space between login and darkmode button */
 }
 
 .btn-login:hover {
@@ -2755,7 +2779,7 @@ p {
 }
 
 .testimonial::before {
-    content: "“";
+    content: "";
     position: absolute;
     top: 20px;
     left: 20px;
